@@ -6,18 +6,20 @@
 
 [Android DecorView浅析](https://www.cnblogs.com/ldq2016/p/6671501.html)
 
+sdk 中 uiautomatorviewer 工具的使用：
+===
 
 使用了style/Theme.AppCompat.Light.NoActionBar
-```
+![](https://github.com/Ablexq/MyStyle/blob/master/pics/%E5%8E%BB%E6%8E%89actionBar.png)
 
-```
 未使用style/Theme.AppCompat.Light.NoActionBar
 
-```
+![](https://github.com/Ablexq/MyStyle/blob/master/pics/%E5%B8%A6actionBar.png)
 
-```
 
 沉浸式：
+===
+
 ```
 
 @Override
