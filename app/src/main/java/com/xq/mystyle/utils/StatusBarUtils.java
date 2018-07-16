@@ -86,22 +86,24 @@ public class StatusBarUtils {
      */
     public static void setStatusBar(Activity activity, boolean useThemestatusBarColor, boolean withoutUseStatusBarColor) {
         Window window = activity.getWindow();
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//5.0及以上 即 api21以上
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {//Android 5.0（API 21）以上版本
             //设置状态栏范围:让应用的主体内容占用系统状态栏的空间
             View decorView = window.getDecorView();
             int option = View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
             decorView.setSystemUiVisibility(option);
+
             //设置状态栏颜色
             if (useThemestatusBarColor) {
                 window.setStatusBarColor(activity.getResources().getColor(R.color.headerColor));
             } else {
                 window.setStatusBarColor(Color.TRANSPARENT);
             }
-        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {//4.4到5.0 即api 19 到 21
+        } else if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {//Android4.4（API 19） - Android 5.0（API 21）
             WindowManager.LayoutParams localLayoutParams = window.getAttributes();
             localLayoutParams.flags = (WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS | localLayoutParams.flags);
         }
 
+        //Android 6.0（API 23）以上版本： 实现状态栏 字色和图标 浅黑色
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M && !withoutUseStatusBarColor) {//false黑字
             window.getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR);
         }
