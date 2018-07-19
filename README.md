@@ -6,6 +6,8 @@
 
 [Android DecorView浅析](https://www.cnblogs.com/ldq2016/p/6671501.html)
 
+[Android 5.0以上系统常用控件着色指南](https://blog.csdn.net/jiashuai94/article/details/79280415)
+
 ```
 applicaton
 	activity
