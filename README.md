@@ -6,6 +6,20 @@
 
 [Android DecorView浅析](https://www.cnblogs.com/ldq2016/p/6671501.html)
 
+```
+applicaton
+	activity
+		window
+			decorview
+				linearlayout
+					viewstub(actionbar)
+					framelayout(content区域)
+						用户自定义
+				view(navigationbar)
+				view(statusbar)
+```
+
+
 sdk 中 uiautomatorviewer 工具的使用：
 ===
 
