@@ -14,4 +14,63 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="StartTheme" parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen">
+        <!-- window标题栏 -->
+        <item name="android:windowNoTitle">true</item>
+        <!-- window本身背景 -->
+        <item name="android:windowBackground">@color/gray</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <!-- ====================================================================================== -->
+    <!-- Translucent -->
+    <style name="test1" parent="@android:style/Theme.Translucent" /><!--纯透明-->
+
+    <style name="test11" parent="@android:style/Theme.Translucent.NoTitleBar" />
+
+    <style name="test12" parent="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+
+    <!-- Light -->
+    <style name="test2" parent="@android:style/Theme.Light" /><!--纯白色-->
+
+    <style name="test21" parent="@android:style/Theme.Light.NoTitleBar" />
+
+    <style name="test22" parent="@android:style/Theme.Light.NoTitleBar.Fullscreen" />
+
+    <!-- Black -->
+    <style name="test3" parent="@android:style/Theme.Black" /><!--纯黑色-->
+
+    <style name="test31" parent="@android:style/Theme.Black.NoTitleBar" />
+
+    <style name="test32" parent="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
+    <!-- Holo -->
+    <style name="test4" parent="@android:style/Theme.Holo" />
+
+    <style name="test41" parent="@android:style/Theme.Holo.NoActionBar" />
+
+    <style name="test42" parent="@android:style/Theme.Holo.NoActionBar.Fullscreen" />
+
+    <!-- Dialog -->
+    <style name="test5" parent="@android:style/Theme.Dialog" />
+
+    <!-- Wallpaper : 用系统桌面为应用程序背景 -->
+    <style name="test6" parent="@android:style/Theme.Wallpaper" />
+
+    <style name="test61" parent="@android:style/Theme.Wallpaper.NoTitleBar" />
+
+    <style name="test62" parent="@android:style/Theme.Wallpaper.NoTitleBar.Fullscreen" />
+
+    <!-- Panel : 平板风格 -->
+    <style name="test7" parent="@android:style/Theme.Panel" />
+    <!-- ====================================================================================== -->
+
+    <style name="Transparent">
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
 </resources>

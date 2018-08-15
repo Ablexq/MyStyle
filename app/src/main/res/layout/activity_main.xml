@@ -61,4 +61,13 @@
         android:gravity="center"
         android:text="设置六" />
 
+    <TextView
+        android:id="@+id/tv7"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="5dp"
+        android:background="#e6e6e6"
+        android:gravity="center"
+        android:text="设置七" />
+
 </LinearLayout>

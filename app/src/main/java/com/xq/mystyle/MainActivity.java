@@ -1,5 +1,6 @@
 package com.xq.mystyle;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Build;
 import android.support.v7.app.ActionBar;
@@ -24,12 +25,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         TextView mTv4 = ((TextView) this.findViewById(R.id.tv4));
         TextView mTv5 = ((TextView) this.findViewById(R.id.tv5));
         TextView mTv6 = ((TextView) this.findViewById(R.id.tv6));
+        TextView mTv7 = ((TextView) this.findViewById(R.id.tv7));
         mTv1.setOnClickListener(this);
         mTv2.setOnClickListener(this);
         mTv3.setOnClickListener(this);
         mTv4.setOnClickListener(this);
         mTv5.setOnClickListener(this);
         mTv6.setOnClickListener(this);
+        mTv7.setOnClickListener(this);
 
         int statusBarHeight = StatusBarUtils.getStatusBarHeight(this);
         System.out.println("statusBarHeight=========" + statusBarHeight);//72
@@ -79,6 +82,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                     int option = View.SYSTEM_UI_FLAG_FULLSCREEN;
                     decorView.setSystemUiVisibility(option);
                 }
+                break;
+
+            case R.id.tv7:
+                startActivity(new Intent(MainActivity.this, ThemeActivity.class));
+                break;
+
+            default:
                 break;
         }
     }
