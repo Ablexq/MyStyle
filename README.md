@@ -177,9 +177,13 @@ WithActionBar 在旧版主题上显示ActionBar
 比如：
 你的Activity继承的是V7包的AppCompatActivity，这时你所使用的主题要与Theme.AppCompat兼容，否则程序就会崩溃了。
 
-参考：[给Activity设置背景（半）透明](https://blog.csdn.net/lu1024188315/article/details/78427058)
-参考：[Android Theme的使用](https://www.cnblogs.com/Jude95/p/4369816.html)
+参考：
 
+[给Activity设置背景（半）透明](https://blog.csdn.net/lu1024188315/article/details/78427058)
+
+[Android Theme的使用](https://www.cnblogs.com/Jude95/p/4369816.html)
+
+[如何在AndroidStudio中新建xml文件夹和values-21文件夹](https://blog.csdn.net/jxq1994/article/details/52737855)
 
 ```
 <!-- 兼容主题 深色主题 activity背景默认黑色，字体默认白色-->
@@ -203,6 +207,75 @@ WithActionBar 在旧版主题上显示ActionBar
 如果使用 android.support.v7.app.ActionBarActivity 就必须要用兼容主题Theme.AppCompat。
 
 ActionBarActivity 的存在就是为了兼容低API。让他们用上高API的东西。比如Toolbar。
+
+
+Android系统在4.0之前没有设计可言，打开APP就是黑乎乎一片，这是最原始的Theme主题
+在Android4.0有了Holo主题，Holo本身继承于Theme主题，而Holo.NoActionBar ，Holo.Dialog，Holo.Light这些都是衍生自Holo主题
+在Android5.0有了Material主题，俗称材料主题，也是继承于Theme主题
+
+
+
+
+Android 3.0                   11
+Android 4.0                   14
+Android 4.4                   19
+Android 5.0                   21
+
+values-sw600dp sw代表smallwidth的意思，当你的屏幕的绝对宽度大于600dp时，屏幕就会自动调用layout-sw600dp文件夹里面的布局。
+values-w820dp表明这个目录下的资源所要求屏幕的最小宽度是820dp。
+values-v11代表在API 11+的设备上，用该目录下的styles.xml代替res/values/styles.xml
+values-v14代表在API 14+的设备上，用该目录下的styles.xml代替res/values/styles.xml
+values-v19/style.xml—对应api19+手机型号在此调用。 
+values-v21/style.xml—对应api21+手机型号在此调用。 
+values/style.xml—对应上面中没有对应主题时默认在此调用。
+
+
+ldpi(low) ~ 120dpi 
+mdpi(medium) ~ 160dpi 
+hdpi(high) ~ 240dpi 
+xhdpi(extra-high) ~ 320dpi 
+xxhdpi(extra-extra-high) ~ 480dpi 
+xxxhpi(extra-extra-extra-high) ~ 640dpi
+
+
+layout-sw600dp、layout-w600dp和layout-h600dp的区别~~
+====
+
+一、layout-sw600dp
+
+这里的sw代表smallwidth的意思，当你的屏幕的绝对宽度大于600dp时，屏幕就会自动调用layout-sw600dp文件夹里面的布局。
+
+注意：这里的【绝对宽度】是指手机的实际宽度，即与手机是否横屏没关系，也就是手机较小的边的长度。
+
+
+二、layout-w600dp
+
+当你的屏幕的相对宽度大于600dp时，屏幕就会自动调用layout-w600dp文件夹里面的布局。
+
+注意：这里的【相对宽度】是指手机相对放置的宽度；即当手机竖屏时，为较小边的长度；当手机横屏时，为较长边的长度。
+
+
+三、layout-h600dp
+
+与layout-w600dp的使用一样，只是这里指的是相对的高度。
+
+当你的屏幕的相对高度大于600dp时，屏幕就会自动调用layout-w600dp文件夹里面的布局。
+
+注意：这里的相对高度是指手机相对放置的高度；即当手机竖屏时，为较长边的长度；
+当手机横屏时，为较小边的长度。但这种方式很少使用，因为屏幕在相对高度上，
+即在纵向上通常能够滚动导致长度变化，而不像横向那样基本固定，因而这个方法灵活性差，google官方文档建议尽量使用这种方式。
+
+
+layout-sw600dp-land ： 横屏绝对宽度600dp以上可用
+layout-sw720dp-port ： 竖屏绝对宽度600dp以上可用
+
+land是横屏，port是竖屏。
+
+
+
+
+
+
 
 
 

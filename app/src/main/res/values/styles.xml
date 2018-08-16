@@ -56,8 +56,8 @@
     <!-- Dialog -->
     <style name="test5" parent="@android:style/Theme.Dialog" />
 
-    <!-- Wallpaper : 用系统桌面为应用程序背景 -->
-    <style name="test6" parent="@android:style/Theme.Wallpaper" />
+    <!-- Wallpaper -->
+    <style name="test6" parent="@android:style/Theme.Wallpaper" /><!-- 用系统桌面 -->
 
     <style name="test61" parent="@android:style/Theme.Wallpaper.NoTitleBar" />
 
