@@ -94,7 +94,7 @@ public class StatusBarUtils {
 
             //设置状态栏颜色
             if (useThemestatusBarColor) {
-                window.setStatusBarColor(activity.getResources().getColor(R.color.headerColor));
+                window.setStatusBarColor(activity.getResources().getColor(R.color.colorPrimaryDark));
             } else {
                 window.setStatusBarColor(Color.TRANSPARENT);
             }
